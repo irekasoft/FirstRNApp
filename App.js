@@ -7,6 +7,8 @@ import { View,
   TouchableOpacity,
   SafeAreaView,
   TextInput,
+  Image,
+
 } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -40,6 +42,7 @@ class App extends Component {
         </View>
 
         <ScrollView style={{padding:16}}>
+
 
           <Text>Hello, this text is inside a ScrollView. ScrollView is the area we can put more content into a limited parent view, but we can scroll to reveal others's content. </Text>
 
@@ -81,6 +84,12 @@ class App extends Component {
           <Text>
             To advance in RN development you need to use yarn or npm to dependancie to your project. I personally use yarn for RN development.
           </Text>
+
+          {/* Add image from local file */}
+          <Image style={{alignSelf:'center'}} source={require('./src/img/devcon-logo.png')} />
+
+          {/* Add image from network */}
+          <Image style={{alignSelf:'center', width:200, height:200, resizeMode:'contain'}} source={{ uri:'https://www.incapsula.com/images/illustartions2/cdn-product/index/free-http2-support.png'}}  />
 
         </ScrollView>
 
