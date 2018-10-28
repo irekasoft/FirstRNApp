@@ -13,6 +13,7 @@ class HomeScreen extends Component {
           <Text>{this.state.currentText}</Text>
           <TextInput onChangeText={(text)=>this.setState({currentText:text})} style={{width:300,height:40,backgroundColor:'skyblue', paddingHorizontal: 10}}/>
           <Button onPress={()=>{alert(this.state.currentText)}} title="Button"/>
+          <Button onPress={()=>{this.props.navigation.navigate('second')}} title="Next Screen"/>
         </View>
       );
     }
